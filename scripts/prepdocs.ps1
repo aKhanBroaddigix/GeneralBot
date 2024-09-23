@@ -72,7 +72,7 @@ if ($env:AZURE_OPENAI_API_KEY) {
 }
 
 $cwd = (Get-Location)
-$dataArg = "`"$cwd/data/*`""
+$dataArg = "`"$cwd/data/Oct - Dec 2022 - Quarterly Report.pdf`""
 $additionalArgs = ""
 if ($args) {
   $additionalArgs = "$args"
