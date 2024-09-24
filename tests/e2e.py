@@ -108,8 +108,8 @@ def test_chat(sized_page: Page, live_server_url: str):
     expect(page.get_by_role("button", name="Developer settings")).to_be_enabled()
 
     # Ask a question and wait for the message to appear
-    page.get_by_placeholder("Type a new question (e.g. does my plan cover annual eye exams?)").click()
-    page.get_by_placeholder("Type a new question (e.g. does my plan cover annual eye exams?)").fill(
+    page.get_by_placeholder("Ask a question(e.g. What is our club to club transfer policy)?").click()
+    page.get_by_placeholder("Ask a question(e.g. What is our club to club transfer policy)?").fill(
         "Whats the dental plan?"
     )
     page.get_by_role("button", name="Submit question").click()
@@ -181,8 +181,8 @@ def test_chat_customization(page: Page, live_server_url: str):
     page.locator("button").filter(has_text="Close").click()
 
     # Ask a question and wait for the message to appear
-    page.get_by_placeholder("Type a new question (e.g. does my plan cover annual eye exams?)").click()
-    page.get_by_placeholder("Type a new question (e.g. does my plan cover annual eye exams?)").fill(
+    page.get_by_placeholder("Ask a question(e.g. What is our club to club transfer policy)?").click()
+    page.get_by_placeholder("Ask a question(e.g. What is our club to club transfer policy)?").fill(
         "Whats the dental plan?"
     )
     page.get_by_role("button", name="Submit question").click()
@@ -238,8 +238,8 @@ def test_chat_customization_gpt4v(page: Page, live_server_url: str):
     page.locator("button").filter(has_text="Close").click()
 
     # Ask a question and wait for the message to appear
-    page.get_by_placeholder("Type a new question (e.g. does my plan cover annual eye exams?)").click()
-    page.get_by_placeholder("Type a new question (e.g. does my plan cover annual eye exams?)").fill(
+    page.get_by_placeholder("Ask a question(e.g. What is our club to club transfer policy)?").click()
+    page.get_by_placeholder("Ask a question(e.g. What is our club to club transfer policy)?").fill(
         "Whats the dental plan?"
     )
     page.get_by_label("Submit question").click()
@@ -265,8 +265,8 @@ def test_chat_nonstreaming(page: Page, live_server_url: str):
     page.locator("button").filter(has_text="Close").click()
 
     # Ask a question and wait for the message to appear
-    page.get_by_placeholder("Type a new question (e.g. does my plan cover annual eye exams?)").click()
-    page.get_by_placeholder("Type a new question (e.g. does my plan cover annual eye exams?)").fill(
+    page.get_by_placeholder("Ask a question(e.g. What is our club to club transfer policy)?").click()
+    page.get_by_placeholder("Ask a question(e.g. What is our club to club transfer policy)?").fill(
         "Whats the dental plan?"
     )
     page.get_by_label("Submit question").click()
@@ -298,8 +298,8 @@ def test_chat_followup_streaming(page: Page, live_server_url: str):
     page.locator("button").filter(has_text="Close").click()
 
     # Ask a question and wait for the message to appear
-    page.get_by_placeholder("Type a new question (e.g. does my plan cover annual eye exams?)").click()
-    page.get_by_placeholder("Type a new question (e.g. does my plan cover annual eye exams?)").fill(
+    page.get_by_placeholder("Ask a question(e.g. What is our club to club transfer policy)?").click()
+    page.get_by_placeholder("Ask a question(e.g. What is our club to club transfer policy)?").fill(
         "Whats the dental plan?"
     )
     page.get_by_label("Submit question").click()
@@ -336,8 +336,8 @@ def test_chat_followup_nonstreaming(page: Page, live_server_url: str):
     page.locator("button").filter(has_text="Close").click()
 
     # Ask a question and wait for the message to appear
-    page.get_by_placeholder("Type a new question (e.g. does my plan cover annual eye exams?)").click()
-    page.get_by_placeholder("Type a new question (e.g. does my plan cover annual eye exams?)").fill(
+    page.get_by_placeholder("Ask a question(e.g. What is our club to club transfer policy)?").click()
+    page.get_by_placeholder("Ask a question(e.g. What is our club to club transfer policy)?").fill(
         "Whats the dental plan?"
     )
     page.get_by_label("Submit question").click()
@@ -375,9 +375,9 @@ def test_ask(sized_page: Page, live_server_url: str):
     if page.get_by_role("button", name="Toggle menu").is_visible():
         page.get_by_role("button", name="Toggle menu").click()
     page.get_by_role("link", name="Ask a question").click()
-    page.get_by_placeholder("Example: Does my plan cover annual eye exams?").click()
-    page.get_by_placeholder("Example: Does my plan cover annual eye exams?").fill("Whats the dental plan?")
-    page.get_by_placeholder("Example: Does my plan cover annual eye exams?").click()
+    page.get_by_placeholder("Example: What is our club to club transfer policy?").fill("Whats the dental plan?")
+    page.get_by_placeholder("Example: What is our club to club transfer policy?").click()
+    page.get_by_placeholder("Example: What is our club to club transfer policy?").click()
     page.get_by_label("Submit question").click()
 
     expect(page.get_by_text("Whats the dental plan?")).to_be_visible()

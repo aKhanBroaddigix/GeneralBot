@@ -12,6 +12,13 @@
     font-size: 1.75em;
 }
 
+.myCustomIcon {
+    width: 40px; /* Adjust the width */
+    height: 40px; /* Adjust the height */
+    margin-bottom: 10px; /* Adjust spacing */
+}
+
+
 .answerText {
     font-size: 1rem;
     font-weight: 400;

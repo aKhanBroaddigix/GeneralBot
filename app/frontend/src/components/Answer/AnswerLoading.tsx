@@ -2,7 +2,11 @@ import { Stack } from "@fluentui/react";
 import { animated, useSpring } from "@react-spring/web";
 
 import styles from "./Answer.module.css";
-import { AnswerIcon } from "./AnswerIcon";
+//import { AnswerIcon } from "./AnswerIcon";
+
+
+import MyCustomIcon from "../../assets/logo.jpeg";
+
 
 export const AnswerLoading = () => {
     const animatedStyles = useSpring({
@@ -13,10 +17,11 @@ export const AnswerLoading = () => {
     return (
         <animated.div style={{ ...animatedStyles }}>
             <Stack className={styles.answerContainer} verticalAlign="space-between">
-                <AnswerIcon />
+                <img src={MyCustomIcon} alt="Loading icon" className={styles.myCustomIcon} />
+                {/* <AnswerIcon / >*/}
                 <Stack.Item grow>
                     <p className={styles.answerText}>
-                         Generating answer
+                         Just a moment and I'll check  {/* Hardcoded Text */}
                         <span className={styles.loadingdots} />
                     </p>
                 </Stack.Item>

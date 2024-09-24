@@ -18,7 +18,7 @@ class ChatUser(HttpUser):
                     {
                         "content": random.choice(
                             [
-                                "What is the next month`s markerting campaign?",
+                                "What is the Fernwood markerting campaign?",
                                 "How do I register new staff member onto Fernwood Masterclass?",
                                 "How do I access my Talkbox account?",
                                 "Whats your whistleblower policy?",

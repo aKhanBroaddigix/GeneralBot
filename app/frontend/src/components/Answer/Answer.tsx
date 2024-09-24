@@ -5,7 +5,8 @@ import DOMPurify from "dompurify";
 import styles from "./Answer.module.css";
 import { ChatAppResponse, getCitationFilePath } from "../../api";
 import { parseAnswerToHtml } from "./AnswerParser";
-import { AnswerIcon } from "./AnswerIcon";
+//import { AnswerIcon } from "./AnswerIcon";
+import MyCustomIcon from "../../assets/logo.jpeg";
 import { SpeechOutputBrowser } from "./SpeechOutputBrowser";
 import { SpeechOutputAzure } from "./SpeechOutputAzure";
 
@@ -46,7 +47,7 @@ export const Answer = ({
         <Stack className={`${styles.answerContainer} ${isSelected && styles.selected}`} verticalAlign="space-between">
             <Stack.Item>
                 <Stack horizontal horizontalAlign="space-between">
-                    <AnswerIcon />
+                    <img src={MyCustomIcon} alt="Loading icon" className={styles.myCustomIcon} />  
                     <div>
                         <IconButton
                             style={{ color: "black" }}
